@@ -1,0 +1,62 @@
+﻿<Window x:Class="task4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:task4"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="900">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <TextBox Name="tbSearch" Width="175" Height="40" Margin="10,0" TextChanged="tbSearch_TextChanged"></TextBox>
+            <ComboBox Name="cbSort" Width="175" Height="40" SelectionChanged="cbSort_SelectionChanged"></ComboBox>
+            <ComboBox Name="cbFiltr" Width="175" Height="40" Margin="10,0" SelectionChanged="cbFiltr_SelectionChanged"></ComboBox>
+
+            <Button x:Name="adminButton" Content="Режим администратора ВЫКЛ" Margin="10,0" Width="185" Height="20" Click="adminButton_Click"></Button>
+        </StackPanel>
+
+
+        <ListView Grid.Row="1" Name="lvServices">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Orientation="Horizontal">
+                            <Image Width="70" Height="70" Source="{Binding MainImagePath}"></Image>
+                            <Grid>
+                                <StackPanel>
+                                    <TextBlock Margin="0,5" Text="{Binding Title}"></TextBlock>
+                                    <TextBlock Margin="0,5" Text="{Binding getCost}"></TextBlock>
+                                    <TextBlock Margin="0,5" Text="{Binding getDiscount}"></TextBlock>
+                                </StackPanel>
+                            </Grid>
+                        </StackPanel>
+
+
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal">
+            <Button Visibility="Hidden"  Margin="7,0" Name="addButton" Content="Добавить" Width="145" Height="30" Click="addButton_Click"></Button>
+            <Button Visibility="Hidden" Name="editButton" Content="Редактировать" Width="145" Height="30" Click="editButton_Click"></Button>
+            <Button Visibility="Hidden" Margin="7,0,0,0" Name="deleteButton" Content="Удалить" Width="145" Height="30" Click="deleteButton_Click"></Button>
+            <Button Visibility="Hidden" Margin="7,0,0,0" Name="recordButton" Content="Записать" Width="145" Height="30" Click="recordButton_Click"></Button>
+            <Button Visibility="Visible" Margin="7,0,0,0" Name="recordListButton" Content="Список записей" Width="145" Height="30" Click="recordListButton_Click"></Button>
+        </StackPanel>
+        <Grid Grid.Row="2" HorizontalAlignment="Right">
+            <TextBlock Height="40" TextAlignment="Center" VerticalAlignment="Center" Text="" Name="tbRecords" Margin="-5,0,5,0"></TextBlock>
+        </Grid>
+    </Grid>
+</Window>

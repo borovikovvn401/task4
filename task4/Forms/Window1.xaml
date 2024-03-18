@@ -1,0 +1,16 @@
+﻿<Window x:Class="task4.Forms.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:task4.Forms"
+        mc:Ignorable="d"
+        Title="Window1" Height="140" Width="200">
+    <Grid>
+        <StackPanel>
+            <TextBlock Margin="0,10" Text="Введите код доступа" HorizontalAlignment="Center"></TextBlock>
+            <TextBox x:Name="tbCode" Margin="10,0,10,20"></TextBox>
+            <Button Name="okButton" Height="20" Width="80" Content="Ок" Click="okButton_Click"></Button>
+        </StackPanel>
+    </Grid>
+</Window>

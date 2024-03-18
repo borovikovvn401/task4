@@ -1,0 +1,83 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\for company.jpg" />
+    <None Remove="Услуги школы\for company.jpg" />
+    <None Remove="Услуги школы\online lessons.jpg" />
+    <None Remove="Услуги школы\Английский язык.jpg" />
+    <None Remove="Услуги школы\Испанский язык.jpg" />
+    <None Remove="Услуги школы\Итальянский язык.jpg" />
+    <None Remove="Услуги школы\киноклуб.jpg" />
+    <None Remove="Услуги школы\Китайский язык.jpg" />
+    <None Remove="Услуги школы\Немецкий язык.png" />
+    <None Remove="Услуги школы\Подготовка к экзамену ACT.png" />
+    <None Remove="Услуги школы\Подготовка к экзамену GMAT.png" />
+    <None Remove="Услуги школы\Подготовка к экзамену GRE.jpeg" />
+    <None Remove="Услуги школы\Подготовка к экзамену IELTS.jpg" />
+    <None Remove="Услуги школы\Подготовка к экзамену SAT.png" />
+    <None Remove="Услуги школы\Подготовка к экзамену TOEFL.jpg" />
+    <None Remove="Услуги школы\Португальский язык.jpg" />
+    <None Remove="Услуги школы\Французский язык.jpg" />
+    <None Remove="Услуги школы\Японский язык.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="6.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\for company.jpg" />
+    <Resource Include="Услуги школы\for company.jpg" />
+    <Resource Include="Услуги школы\online lessons.jpg" />
+    <Resource Include="Услуги школы\Английский язык.jpg" />
+    <Resource Include="Услуги школы\Испанский язык.jpg" />
+    <Resource Include="Услуги школы\Итальянский язык.jpg" />
+    <Resource Include="Услуги школы\киноклуб.jpg" />
+    <Resource Include="Услуги школы\Китайский язык.jpg" />
+    <Resource Include="Услуги школы\Немецкий язык.png" />
+    <Resource Include="Услуги школы\Подготовка к экзамену ACT.png" />
+    <Resource Include="Услуги школы\Подготовка к экзамену GMAT.png" />
+    <Resource Include="Услуги школы\Подготовка к экзамену GRE.jpeg" />
+    <Resource Include="Услуги школы\Подготовка к экзамену IELTS.jpg" />
+    <Resource Include="Услуги школы\Подготовка к экзамену SAT.png" />
+    <Resource Include="Услуги школы\Подготовка к экзамену TOEFL.jpg" />
+    <Resource Include="Услуги школы\Португальский язык.jpg" />
+    <Resource Include="Услуги школы\Французский язык.jpg" />
+    <Resource Include="Услуги школы\Японский язык.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
